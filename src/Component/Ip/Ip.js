@@ -8,7 +8,7 @@ export default class Ip extends Component {
     }
 
     componentDidMount() {
-        fetch( 'https://freegeoip.app/json/')
+        fetch( 'http://ip-api.com/json/')
             .then(res => res.json())
             .then(json => {
                 console.log(json)
@@ -20,24 +20,21 @@ export default class Ip extends Component {
 
 
     render() {
-        // const ip = this.state.item.map(((value, key) =>
-        //     <span>{value}</span>
-        // ))
         return (
             <div className="Ip">
                 <table className="bordered centered">
                     <tbody>
                         <tr>
-                            <td>Ip адресс:</td>
-                            <td>{this.state.item.ip}</td>
+                            <td>Ip адрес:</td>
+                            <td>{this.state.item.query}</td>
                         </tr>
                         <tr>
                             <td>Страна:</td>
-                            <td>{this.state.item.country_name}</td>
+                            <td>{this.state.item.country}</td>
                         </tr>
                         <tr>
                             <td>Область:</td>
-                            <td>{this.state.item.region_name}</td>
+                            <td>{this.state.item.regionName}</td>
                         </tr>
                         <tr>
                             <td>Город:</td>
@@ -45,7 +42,7 @@ export default class Ip extends Component {
                         </tr>
                         <tr>
                             <td>Индекс:</td>
-                            <td>{this.state.item.zip_code}</td>
+                            <td>{this.state.item.zip}</td>
                         </tr>
                     </tbody>
                 </table>
