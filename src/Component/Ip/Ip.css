@@ -1,0 +1,9 @@
+.Ip {
+    max-width: 600px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+    border: 1px solid lightskyblue;
+}
